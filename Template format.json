@@ -5,6 +5,17 @@
      "tenantPassword": {
       "type": "securestring"
     },
+            "VmConf": {
+      "type": "array",
+      "defaultValue": {
+        "vmNameindex": "Nova-Demo-XxX",
+        "ipAddress": "100.69.12.121"
+      },
+      "metadata": {
+        "description": "all VM Config {'vmNameindex':'_','ipAddress':'_'}"
+      }
+    },
+        
     },
     "variables": {
        },
