@@ -27,7 +27,10 @@
         "vaultName": {
           "type": "string"
         }
-  
+      "tenantPassword": {
+      "type": "securestring"
+    },
+
   
   
   
