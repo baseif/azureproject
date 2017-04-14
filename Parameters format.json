@@ -28,7 +28,7 @@
         "keyVault": {
           "id": "/subscriptions/220a4b0b-4b08-4c76-8e8b-5660ff83b4cb/resourceGroups/nova-int-rg/providers/Microsoft.KeyVault/vaults/nova-vault"
         },
-        "secretName": "tenantPassword"
+        "secretName": "Trendmicro-TenantPassword"
       }
 
     },
