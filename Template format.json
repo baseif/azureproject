@@ -10,12 +10,7 @@
   
   
   
-  "VmConf": {
-      "type": "array",
-      "defaultValue": {
-        "vmNameindex": "Nova-Demo-XxX",
-      },
-    },
+
   
   
   
