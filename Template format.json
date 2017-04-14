@@ -3,7 +3,50 @@
   "contentVersion": "1.0.0.0",
   "parameters": {},
   "variables": {},
-  "resources": [],
+  "resources": [
+  
+  
+  
+    
+    
+    
+    
+    {
+      "type": "Microsoft.Compute/virtualMachines/extensions",
+
+      "name": "[concat(parameters('VmConf')[copyIndex()].vmNameindex,'/TrendMicroDSALinux')]",
+      "apiVersion": "2015-06-15",
+      "location": "[resourceGroup().location]",
+      "dependsOn": [
+        "[concat('Microsoft.Compute/virtualMachines/', parameters('VmConf')[copyIndex()].vmNameindex)]"
+      ],
+      "properties": {
+
+        "publisher": "TrendMicro.DeepSecurity",
+        "type": "TrendMicroDSALinux",
+        "typeHandlerVersion": "9.6",
+        "autoUpgradeMinorVersion": true,
+        "settings": {
+          "DSMname": "[parameters('DSMname')]",
+          "DSMport": "[parameters('DSMport')]",
+          "policyNameorID": "[parameters('policyNameorID')]"
+        },
+        "protectedSettings": {
+          "tenantID": "[parameters('tenantID')]",
+          "tenantPassword": "[parameters('tenantPassword')]"
+
+        }
+      },
+      "copy": {
+        "name": "VMextensionsCopy",
+        "count": "[length(parameters('VmConf'))]"
+      }
+    }
+    
+    
+  
+  
+  ],
   "outputs": {
     "result": {
         "value": "Hello World",
@@ -11,3 +54,7 @@
     }
   }
 }
+
+
+
+
