@@ -1,0 +1,72 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "",
+    "parameters": {},
+    //"variables": {  },
+    "variables": {
+        "location": "[resourceGroup().location]",
+        "usernameAndPassword": "[concat(parameters('username'), ':', parameters('password'))]",
+        "authorizationHeader": "[concat('Basic ', base64(variables('usernameAndPassword')))]"
+    },
+    //or 
+    // "variables": {
+    //     "<variable-name>": "<variable-value>",
+    //     "<variable-name>": {
+    //         "<variable-complex-type-value>""
+    //     }
+    // },
+    // "variables": {
+    //     "connectionString": "[concat('Name=', parameters('username'), ';Password=', parameters('password'))]"
+    // },
+    "resources": [],
+    "outputs": {}
+}
+//OR 
+{
+    "parameters": {
+        "environmentName": {
+            "type": "string",
+            "allowedValues": [
+                "test",
+                "prod"
+            ]
+        }
+    },
+    "variables": {
+        "environmentSettings": {
+            "test": {
+                "instancesSize": "Small",
+                "instancesCount": 1
+            },
+            "prod": {
+                "instancesSize": "Large",
+                "instancesCount": 4
+            }
+        },
+        "currentEnvironmentSettings": "[variables('environmentSettings')[parameters('environmentName')]]",
+        "instancesSize": "[variables('currentEnvironmentSettings').instancesSize]",
+        "instancesCount": "[variables('currentEnvironmentSettings').instancesCount]"
+    },
+    "resources": [
+   {
+     "apiVersion": "<api-version-of-resource>",
+     "type": "<resource-provider-namespace/resource-type-name>",
+     "name": "<name-of-the-resource>",
+     "location": "<location-of-resource>",
+     "tags": "<name-value-pairs-for-resource-tagging>",
+     "comments": "<your-reference-notes>",
+     "dependsOn": [
+       "<array-of-related-resource-names>"
+     ],
+     "properties": "<settings-for-the-resource>",
+     "copy": {
+       "name": "<name-of-copy-loop>",
+       "count": "<number-of-iterations>"
+     },
+     "resources": [
+       "<array-of-child-resources>"
+     ]
+   }
+]
+
+}
