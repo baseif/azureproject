@@ -4,7 +4,9 @@
   "parameters": {
   
      
-  
+    "tenantPassword": {
+      "type": "string"
+    },
   
   
   
