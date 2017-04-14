@@ -4,7 +4,10 @@
     "parameters": {
     
     },
-    "variables": {},
+    "variables": {
+        "tenantPassword": {
+      "type": "securestring"
+    },},
     "resources": [
     
       {
