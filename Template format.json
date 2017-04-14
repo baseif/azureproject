@@ -1,7 +1,46 @@
 {
   "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
-  "parameters": {},
+  "parameters": {
+  
+      "vaultName": {
+      "type": "string"
+    },
+    "secretName": {
+      "type": "string"
+    },
+    "keyVaultResourceGroup": {
+      "type": "string"
+    },
+    "DSMname": {
+      "type": "string"
+    },
+    "DSMport": {
+      "type": "string"
+    },
+    "tenantID": {
+      "type": "string"
+    },
+    "tenantPassword": {
+      "type": "securestring"
+    },
+    "policyNameorID": {
+      "defaultValue": "",
+      "type": "string"
+    },
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  },
   "variables": {},
   "resources": [
   
