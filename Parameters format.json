@@ -3,11 +3,11 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
 
-    "vaultName": {
+     "vaultName": {
       "value": "nova-vault"
     },
     "secretName": {
-      "value": "tenantPassword"
+      "value": "Trendmicro-TenantPassword"
     },
     "keyVaultResourceGroup": {
       "value": "nova-int-rg"
@@ -22,16 +22,7 @@
       "value": "D083E154-29AF-416A-C10F-5B16873C521A"
     },
 
-      
-    "tenantPassword": {
-      "reference": {
-        "keyVault": {
-          "id": "/subscriptions/220a4b0b-4b08-4c76-8e8b-5660ff83b4cb/resourceGroups/nova-int-rg/providers/Microsoft.KeyVault/vaults/nova-vault"
-        },
-        "secretName": "Trendmicro-TenantPassword"
-      }
 
-    },
       
       
   }
