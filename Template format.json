@@ -3,7 +3,7 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
 
-    
+
 
     "DSMname": {
       "type": "string"
@@ -18,37 +18,26 @@
     "tenantID": {
       "type": "string"
     },
-    
+
 
     "tenantPassword": {
       "type": "string"
+    },
+
+    "VmName": {
+      "type": "string"
     }
-
-
-
-
-
-
-
-
 
   },
   "variables": {},
   "resources": [
 
-
-
-
-
-
-
     {
       "type": "Microsoft.Compute/virtualMachines/extensions",
-
-      "name": "Nova-Demo-vm-3/TrendMicroDSALinux",
+      "name": "[concat(parameters('VmName'),'/TrendMicroDSALinux')]",
       "apiVersion": "2015-06-15",
       "location": "[resourceGroup().location]",
-  
+
       "properties": {
 
         "publisher": "TrendMicro.DeepSecurity",
