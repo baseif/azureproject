@@ -32,9 +32,7 @@
       "name": "Nova-Demo-vm-3/TrendMicroDSALinux",
       "apiVersion": "2015-06-15",
       "location": "[resourceGroup().location]",
-      "dependsOn": [
-        "Microsoft.Compute/virtualMachines/Nova-Demo-vm-3"
-      ],
+  
       "properties": {
 
         "publisher": "TrendMicro.DeepSecurity",
