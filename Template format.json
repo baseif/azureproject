@@ -29,11 +29,11 @@
     {
       "type": "Microsoft.Compute/virtualMachines/extensions",
 
-      "name": "[concat(parameters('VmConf')[copyIndex()].vmNameindex,'/TrendMicroDSALinux')]",
+      "name": "[concat('Nova-Demo-vm-3','/TrendMicroDSALinux')]",
       "apiVersion": "2015-06-15",
       "location": "[resourceGroup().location]",
       "dependsOn": [
-        "[concat('Microsoft.Compute/virtualMachines/', parameters('VmConf')[copyIndex()].vmNameindex)]"
+        "[concat('Microsoft.Compute/virtualMachines/', 'Nova-Demo-vm-3']"
       ],
       "properties": {
 
