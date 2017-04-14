@@ -3,6 +3,30 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
 
+    
+    "vaultName": {
+      "type": "string"
+    },
+    "secretName": {
+      "type": "string"
+    },
+    "DSMname": {
+      "type": "string"
+    },
+    "DSMport": {
+      "type": "string"
+    },
+    "keyVaultResourceGroup": {
+      "type": "string"
+    },
+    "policyNameorID": {
+      "defaultValue": "",
+      "type": "string"
+    },
+    "tenantID": {
+      "type": "string"
+    },
+    
 
     "tenantPassword": {
       "type": "string"
