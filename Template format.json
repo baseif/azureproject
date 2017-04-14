@@ -2,38 +2,38 @@
   "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
-  
-     
+
+
     "tenantPassword": {
       "type": "string"
-    },
-  
-  
-  
+    }
 
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
+
   },
   "variables": {},
   "resources": [
-  
-  
-  
-    
-    
-    
-    
+
+
+
+
+
+
+
     {
       "type": "Microsoft.Compute/virtualMachines/extensions",
 
-      "name": "[Nova-Demo-vm-3/TrendMicroDSALinux]",
+      "name": "Nova-Demo-vm-3/TrendMicroDSALinux",
       "apiVersion": "2015-06-15",
       "location": "[resourceGroup().location]",
       "dependsOn": [
-        "['Microsoft.Compute/virtualMachines/Nova-Demo-vm-3']"
+        "Microsoft.Compute/virtualMachines/Nova-Demo-vm-3"
       ],
       "properties": {
 
@@ -52,21 +52,20 @@
 
         }
       }
-  
+
     }
-    
-    
-  
-  
+
+
+
+
   ],
   "outputs": {
     "result": {
-        "value": "Hello World",
-        "type" : "string"
+      "value": "Hello World",
+      "type": "string"
     }
   }
 }
-
 
 
 
