@@ -5,6 +5,28 @@
   
      
   
+        "DSMname": {
+          "type": "string"
+        },
+        "DSMport": {
+          "type": "string"
+        },
+        "keyVaultResourceGroup": {
+          "type": "string"
+        },
+        "policyNameorID": {
+          "defaultValue": "",
+          "type": "string"
+        },
+        "secretName": {
+          "type": "string"
+        },
+        "tenantID": {
+          "type": "string"
+        },
+        "vaultName": {
+          "type": "string"
+        }
   
   
   
