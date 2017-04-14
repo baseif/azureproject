@@ -3,15 +3,7 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
 
-     "vaultName": {
-      "value": "nova-vault"
-    },
-    "secretName": {
-      "value": "Trendmicro-TenantPassword"
-    },
-    "keyVaultResourceGroup": {
-      "value": "nova-int-rg"
-    },
+
     "DSMname": {
       "value": "agents.deepsecurity.trendmicro.com"
     },
