@@ -4,19 +4,11 @@
   "parameters": {
 
     
-    "vaultName": {
-      "type": "string"
-    },
-    "secretName": {
-      "type": "string"
-    },
+
     "DSMname": {
       "type": "string"
     },
     "DSMport": {
-      "type": "string"
-    },
-    "keyVaultResourceGroup": {
       "type": "string"
     },
     "policyNameorID": {
