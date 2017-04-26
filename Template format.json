@@ -5,7 +5,20 @@
 
 
 
-   
+    "DSMname": {
+      "type": "string"
+    },
+    "DSMport": {
+      "type": "string"
+    },
+    "policyNameorID": {
+      "defaultValue": "",
+      "type": "string"
+    },
+    "tenantID": {
+      "type": "string"
+    },
+
 
     "tenantPassword": {
       "type": "string"
