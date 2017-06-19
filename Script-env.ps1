@@ -1,5 +1,12 @@
+param (
+    [string]$storageAccesskeys,
+      [string]$Storageaccount,
+      [string]$path
+    )
+
+
 Set-ExecutionPolicy unrestricted
-net use "s:" "\\c4reftstwksvmstorage.file.core.windows.net\c4sources" /u:"c4reftstwksvmstorage" "ls3P9GYP6qM7cCTUy3jmkqIlZdpZtZNdgiRhOuASUgqpJhs5yrM8TzNZU+8BUHrhxnKafRuDr75+2TxConsCzQ=="
+net use "s:" "\\$Storageaccount.file.core.windows.net\$path" /u:"$Storageaccount" $storageAccesskeys
 
 copy-item S:\SourcesInstallVM\ c:\ -recurse
 Copy-Item S:\SourcesInstallVM\SourceDSCprerequisites C:\SourcesInstallVM\SourceDSCprerequisites -recurse
