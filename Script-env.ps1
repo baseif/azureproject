@@ -3,8 +3,6 @@
       [string]$Storageaccount,
       [string]$path
     )
-
-
 Set-ExecutionPolicy unrestricted
 net use "s:" "\\$Storageaccount.file.core.windows.net\$path" /u:"$Storageaccount" $storageAccesskeys
 
@@ -18,10 +16,9 @@ while (Get-Process "wusa" -ErrorAction silentlycontinue) {"WMF 5.1 is being inst
 Enable-PSRemoting -Force
 netsh advfirewall firewall add rule name="ICMP Allow incoming V4 echo request" protocol=icmpv4:8,any dir=in action=allow
 
-
-
 # Name of your network adapter in Windows
 $netAdapterName = (Get-NetAdapter).Name
 # Disable IPv6
 Disable-NetAdapterBinding -InterfaceAlias $netAdapterName -ComponentID ms_tcpip6
+
 restart-computer -force
