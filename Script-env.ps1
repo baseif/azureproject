@@ -19,3 +19,7 @@ while (Get-Process "wusa" -ErrorAction silentlycontinue) {"WMF 5.1 is being inst
 Enable-PSRemoting -Force
 
 restart-computer -force		
+
+netsh advfirewall firewall add rule name="ICMP Allow incoming V4 echo request" protocol=icmpv4:8,any dir=in action=allow
+
+restart-computer -force		
