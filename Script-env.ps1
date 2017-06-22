@@ -17,3 +17,5 @@ cd (get-childitem -Recurse | where { $_.Name -match "Install-WMF*" }).DirectoryN
 & (get-childitem -Recurse | where { $_.Name -match "Install-WMF*" }).FullName
 while (Get-Process "wusa" -ErrorAction silentlycontinue) {"WMF 5.1 is being instaled, please wait..."; start-sleep -seconds 5}
 Enable-PSRemoting -Force
+
+restart-computer -force		
