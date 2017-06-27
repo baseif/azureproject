@@ -6,7 +6,9 @@ param (
 Set-ExecutionPolicy unrestricted
 
 
-diskpart /s C:\SourcesInstallVM\SourceDSCprerequisites\DiskPartScript.txt > C:\SourcesInstallVM\SourceDSCprerequisites\Log_DiskPart.log
+New-item -ItemType file C:\SourcesInstallVM\SourceDSCprerequisites\Log_DiskPart.log
+diskpart /s C:\SourcesInstallVM\SourceDSCprerequisites\DiskPartScript.txt >> C:\SourcesInstallVM\SourceDSCprerequisites\Log_DiskPart.log
+
 
 New-ItemProperty 'HKLM:\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters\' -Name  'DisabledComponents' -Value '0xff' -PropertyType 'DWord'
 
